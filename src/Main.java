@@ -2,7 +2,9 @@ public class Main {
     public static void main(String[] args) {
         int n = 5;
         int[] arr = new int[]{4, 2, 6, 3, 1};
-        System.out.println(minElement(n, arr));
+       // System.out.println(minElement(n, arr));
+        System.out.println(average(n, arr));
+
     }
 
     static int minElement(int n, int[] arr) {
@@ -14,4 +16,9 @@ public class Main {
         }
         return min;
     }
+    static float average(int n, int[] arr){        float sum = 0;
+        for(int i = 0; i < n; i++){            sum += arr[i];
+        }        return sum / n;
+    }
+
 }
