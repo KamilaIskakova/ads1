@@ -14,8 +14,8 @@ public class Main {
         //}
         // System.out.println(isDigit("123a123"));
         int a = 5;        int b = 4;
-        System.out.println(binomial(5, 4));
-
+        //System.out.println(binomial(5, 4));
+        System.out.println(gcd(a, b));
     }
     static int minElement(int n, int[] arr) {
         int min = arr[0];
@@ -122,5 +122,16 @@ public class Main {
  * @param n The total number of items.
  * @param k The number of items to choose from the total.
  * @return The binomial coefficient (n choose k).
+ */
+    static int gcd(int a, int b){
+        if(a == 0) return b;
+        if(b == 0) return a;
+        return gcd(b, a % b);
+    }
+/**
+ * This method computes the greatest common divisor (GCD) of two numbers using Euclid's algorithm recursively.
+ * @param a The first number.
+ * @param b The second number.
+ * @return The greatest common divisor (GCD) of a and b.
  */
 }
