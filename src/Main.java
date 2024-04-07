@@ -5,7 +5,8 @@ public class Main {
         // System.out.println(minElement(n, arr));
         // System.out.println(average(n, arr));
         // System.out.println(isPrime(7));
-        System.out.println(factorial(n));
+        // System.out.println(factorial(n));
+        System.out.println(fibonacci(n));
 
     }
 
@@ -62,5 +63,14 @@ public class Main {
  * @param n The number for which factorial is to be calculated.
  * @return The factorial of the given number.
  */
-
+    static int fibonacci(int n){
+        if(n == 1) return 1;
+        if(n == 0) return 0;
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+/**
+ * This method computes the nth Fibonacci number recursively.
+ * @param n The index of the Fibonacci number to be computed.
+ * @return The nth Fibonacci number.
+ */
 }
