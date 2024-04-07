@@ -8,10 +8,12 @@ public class Main {
         // System.out.println(factorial(n));
         // System.out.println(fibonacci(n));
         // System.out.println(power(4, 3));
-        arr = reverseArray(n, arr);
-        for (int i = 0; i < n; i++) {
-            System.out.print(i + " ");
-        }
+        // arr = reverseArray(n, arr);
+        //for (int i = 0; i < n; i++) {
+            //System.out.print(i + " ");
+        //}
+        System.out.println(isDigit("123a123"));
+
     }
     static int minElement(int n, int[] arr) {
         int min = arr[0];
@@ -98,5 +100,15 @@ public class Main {
  * @param n The size of the array.
  * @param arr The array to be reversed.
  * @return The reversed array.
+ */
+    static boolean isDigit(String s){
+        if(s.equals("")) return true;
+        if(48 > s.charAt(0) || 57 < s.charAt(0)) return false;
+        return isDigit(s.substring(1));
+    }
+/**
+ * This method checks if a given string consists of digits only.
+ * @param s The string to be checked.
+ * @return true if the string consists of digits only, false otherwise.
  */
 }
