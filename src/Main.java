@@ -6,7 +6,8 @@ public class Main {
         // System.out.println(average(n, arr));
         // System.out.println(isPrime(7));
         // System.out.println(factorial(n));
-        System.out.println(fibonacci(n));
+        // System.out.println(fibonacci(n));
+        System.out.println(power(4, 3));
 
     }
 
@@ -72,5 +73,15 @@ public class Main {
  * This method computes the nth Fibonacci number recursively.
  * @param n The index of the Fibonacci number to be computed.
  * @return The nth Fibonacci number.
+ */
+    static int power(int a, int n){
+        if(n == 0) return 1;
+        return a * power(a, n - 1);
+    }
+/**
+ * This method computes the power of a number recursively.
+ * @param a The base.
+ * @param n The exponent.
+ * @return The result of a raised to the power of n.
  */
 }
