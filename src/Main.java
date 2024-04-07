@@ -12,7 +12,9 @@ public class Main {
         //for (int i = 0; i < n; i++) {
             //System.out.print(i + " ");
         //}
-        System.out.println(isDigit("123a123"));
+        // System.out.println(isDigit("123a123"));
+        int a = 5;        int b = 4;
+        System.out.println(binomial(5, 4));
 
     }
     static int minElement(int n, int[] arr) {
@@ -110,5 +112,15 @@ public class Main {
  * This method checks if a given string consists of digits only.
  * @param s The string to be checked.
  * @return true if the string consists of digits only, false otherwise.
+ */
+    static int binomial(int n, int k){
+        if(k == 0 || k == n) return 1;
+        return binomial(n - 1, k - 1) + binomial(n - 1, k);
+    }
+/**
+ * This method computes binomial coefficients recursively.
+ * @param n The total number of items.
+ * @param k The number of items to choose from the total.
+ * @return The binomial coefficient (n choose k).
  */
 }
