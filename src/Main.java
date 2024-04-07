@@ -7,10 +7,12 @@ public class Main {
         // System.out.println(isPrime(7));
         // System.out.println(factorial(n));
         // System.out.println(fibonacci(n));
-        System.out.println(power(4, 3));
-
+        // System.out.println(power(4, 3));
+        arr = reverseArray(n, arr);
+        for (int i = 0; i < n; i++) {
+            System.out.print(i + " ");
+        }
     }
-
     static int minElement(int n, int[] arr) {
         int min = arr[0];
         for (int i = 0; i < n; i++) {
@@ -83,5 +85,18 @@ public class Main {
  * @param a The base.
  * @param n The exponent.
  * @return The result of a raised to the power of n.
+ */
+    static int[] reverseArray(int n, int[] arr){
+        int temp = arr[arr.length - n];
+        arr[arr.length - n] = arr[n - 1];
+        arr[n - 1] = temp;
+        if(n - 1 == Math.floor(arr.length / 2f)) return arr;
+        return reverseArray(n - 1, arr);
+}
+/**
+ * This method reverses an array recursively.
+ * @param n The size of the array.
+ * @param arr The array to be reversed.
+ * @return The reversed array.
  */
 }
