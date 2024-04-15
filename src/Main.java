@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         int n = 5;
@@ -15,7 +17,11 @@ public class Main {
         // System.out.println(isDigit("123a123"));
         int a = 5;        int b = 4;
         //System.out.println(binomial(5, 4));
-        System.out.println(gcd(a, b));
+        // System.out.println(gcd(a, b));
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+        System.out.println(upper(input));
+        scanner.next();
     }
     static int minElement(int n, int[] arr) {
         int min = arr[0];
@@ -134,4 +140,15 @@ public class Main {
  * @param b The second number.
  * @return The greatest common divisor (GCD) of a and b.
  */
+
+    static String upper(String text){
+        if(text.isEmpty()) return "";
+        int text= text.charAt(0);
+        if(text >= 97 && text <= 122) text-=32;
+        return (char) text+ upper (text.substring(1));
+    }
+
 }
+
+
+
